@@ -27,15 +27,15 @@ pipeline {
 
 def executeCommands(commands, stageName) {
     for (command in commands) {
-        stage("${stageName} - ${command}") {
+        stage("${command}") {
             steps {
                 script {
                     echo "Executing Command: $command"
-                    if (isWindows()) {
-                        bat(command)
-                    } else {
-                        sh(command)
-                    }
+                    // if (isWindows()) {
+                    //     bat(command)
+                    // } else {
+                    //     sh(command)
+                    // }
                 }
             }
         }
