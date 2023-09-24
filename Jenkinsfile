@@ -14,7 +14,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 def jsonContent = readFile('output.json')
-                def data = readJSONN text: jsonContent
+                def data = readJSON text: jsonContent
                 echo "${data}"
             }
         }
