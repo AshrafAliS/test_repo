@@ -17,7 +17,7 @@ pipeline {
                     def jsonContent = readFile('output.json')
                     def data = readJSON text: jsonContent
                     echo "${data}"
-                    executeCommands(data.common, "Common Commands")
+                    executeCommands(data.windows, "Common Commands")
                 }
             }
         }
